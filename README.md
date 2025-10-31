@@ -1,1 +1,0 @@
-# OffSec-echo-response-challenge
