@@ -233,9 +233,9 @@ This directory contains:
 
 ## 👨‍💻 Author
 
-**Umair Aziz**  
-GitHub: [@umair-aziz025](https://github.com/umair-aziz025)  
-Repository: [echo-response-offsec-challenge](https://github.com/umair-aziz025/echo-response-offsec-challenge)
+**Rudra Sharma**  
+- GitHub: [@Rudii-25](https://github.com/Rudii-25)
+- Repository: [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge.git)
 
 ---
 

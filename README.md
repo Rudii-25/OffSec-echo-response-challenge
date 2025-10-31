@@ -222,7 +222,7 @@ To explore the solutions:
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/umair-aziz025/echo-response-offsec-challenge.git
+   git clone https://github.com/Rudii-25/OffSec-echo-response-challenge.git
    cd echo-response-offsec-challenge
    ```
 
@@ -260,9 +260,9 @@ To explore the solutions:
 
 ## 🤝 Connect
 
-**Umair Aziz**  
-- GitHub: [@umair-aziz025](https://github.com/umair-aziz025)
-- Repository: [echo-response-offsec-challenge](https://github.com/umair-aziz025/echo-response-offsec-challenge)
+**Rudra Sharma**  
+- GitHub: [@Rudii-25](https://github.com/Rudii-25)
+- Repository: [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge.git)
 
 ---
 
@@ -278,10 +278,10 @@ If you find these solutions helpful, please consider giving this repository a st
 
 ---
 
-**Last Updated:** October 28, 2025
+**Last Updated:** October 31, 2025
 
 ---
 
 *"Will you uncover the truth before the balance collapses?"*
 
-**Last Updated:** October 28, 2025
+**Last Updated:** October 31, 2025

@@ -1,6 +1,6 @@
 # ProtoVault Security Incident - Investigation Report
 **Date:** October 11, 2025  
-**Investigator:** MR. Umair 
+**Investigator:** MR. Rudra 
 **Case:** Database Leak Investigation
 
 ---
@@ -257,4 +257,4 @@ The investigation confirmed a complete database leak through an insecure backup 
 
 ---
 
-*Report prepared by: MR. Umair*
+*Report prepared by: MR. Rudra*
