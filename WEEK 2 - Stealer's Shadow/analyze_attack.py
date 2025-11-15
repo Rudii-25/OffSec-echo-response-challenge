@@ -1,7 +1,7 @@
 """
 Stealer's Shadow - Attack Chain Analysis Script
 ================================================
-Author: MR. Umair
+Author: MR. Rudra
 Date: October 15, 2025
 Purpose: Analyze and visualize the attack chain from the investigation
 """

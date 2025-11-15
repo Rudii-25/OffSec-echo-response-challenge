@@ -25,7 +25,7 @@ class WriteupReport(FPDF):
         self.set_y(-15)
         self.set_font('Helvetica', 'I', 8)
         self.set_text_color(128, 128, 128)
-        self.cell(0, 10, 'Report by: Mr.Umair | OffSec Echo Response Challenge', 0, 0, 'C')
+        self.cell(0, 10, 'Report by: Mr. Rudra | OffSec Echo Response Challenge', 0, 0, 'C')
     
     def cover_page(self):
         self.add_page()
@@ -55,7 +55,7 @@ class WriteupReport(FPDF):
         
         # Author
         self.set_font('Helvetica', 'B', 14)
-        self.cell(0, 10, 'Mr.Umair', 0, 1, 'C')
+        self.cell(0, 10, 'Mr. Rudra', 0, 1, 'C')
     
     def add_question(self, num, question):
         self.set_font('Helvetica', 'B', 14)

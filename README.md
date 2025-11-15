@@ -127,6 +127,93 @@ Echo Response is a high-stakes cyber defense simulation featuring escalating sce
 
 ---
 
+### ✅ [Week 5 - Emerald Anomaly](./WEEK%205%20-%20Emerald%20Anomaly)
+**Status:** COMPLETED  
+**Category:** Incident Response, Malware Analysis, Network Forensics  
+**Difficulty:** Hard
+
+**Scenario:** Supply chain attack against MEGACORPONE through a backdoored Python MCP (Model Context Protocol) server. Sophisticated multi-stage attack using typosquatting, obfuscation, credential exfiltration, and SMTP relay validation to compromise CLIENT14 and steal employee credentials.
+
+**Key Skills:**
+- Python malware reverse engineering
+- Obfuscation analysis and decoding
+- Typosquatting detection and analysis
+- Sysmon Event ID 22 (DNS Query) analysis
+- PCAP analysis for SMTP authentication
+- Base64 credential decoding
+- Network IOC extraction
+- Multi-stage attack chain reconstruction
+- C2 infrastructure mapping
+
+**Novel Techniques Discovered:**
+- CRYPTO_SEED character substitution cipher
+- GitHub domain typosquatting (avatars.githubuserc**0**ntent.com)
+- MCP server supply chain backdoor
+- Dual-infrastructure attack (C2 + SMTP relay)
+- Azure infrastructure EHLO spoofing
+- Keyword-triggered credential exfiltration
+
+**Attack Chain:**
+1. Backdoored MCP server deployed on CLIENT14
+2. PowerShell commands with "pass"/"securestring" trigger exfiltration
+3. Credentials sent to typosquatted domain (100.43.72.21)
+4. SMTP relay (79.134.64.179) validates stolen credentials
+5. Attacker gains email access for lateral movement
+
+**Files:**
+- [Investigation Report](./WEEK%205%20-%20Emerald%20Anomaly/INVESTIGATION_REPORT.md)
+- [Analysis Script](./WEEK%205%20-%20Emerald%20Anomaly/analyze_backdoor.ps1)
+- [Challenge README](./WEEK%205%20-%20Emerald%20Anomaly/README.md)
+- [Backdoor Source](./WEEK%205%20-%20Emerald%20Anomaly/mcp_backdoor_server.py)
+
+---
+
+### ✅ [Week 6 - Nullform Vault](./WEEK%206%20-%20Nullform%20Vault)
+**Status:** INVESTIGATION COMPLETE ✅  
+**Category:** Malware Analysis, Reverse Engineering, Digital Forensics  
+**Difficulty:** Hard
+
+**Scenario:** The final confrontation - analyzing **Obfuscated_Intent.exe**, a sophisticated UPX-packed malware sample designed to exfiltrate sensitive documents. The malware employs anti-debugging checks, ICMP reconnaissance, recursive filesystem scanning, and PowerShell-based HTTP exfiltration to steal office documents and emails. **Investigation successfully concluded. All IOCs documented. The Nullform Key has been secured.**
+
+**Key Skills:**
+- UPX unpacking and binary analysis
+- PE file format analysis
+- Anti-debugging technique identification
+- PowerShell obfuscation analysis
+- Hex encoding/decoding
+- Import table analysis (WS2_32.dll, IPHLPAPI.DLL)
+- ICMP protocol analysis
+- HTTP exfiltration detection
+- C runtime function analysis (_wsystem)
+- MITRE ATT&CK technique mapping
+
+**Novel Techniques Discovered:**
+- UPX packing for binary obfuscation
+- Hex-encoded URL strings in PowerShell commands
+- XOR-encoded file extensions (key 0x7a)
+- ICMP "w00t" payload for connectivity verification
+- _wsystem() for PowerShell command execution
+- Invoke-RestMethod PUT for individual file uploads
+- Anti-debugging checks (IsDebuggerPresent, CheckRemoteDebuggerPresent)
+
+**Attack Chain:**
+1. Execute UPX-packed malware (Obfuscated_Intent.exe)
+2. Perform anti-debugging checks to evade analysis
+3. Send ICMP ping with "w00t" payload to verify C2 connectivity (203.0.113.42)
+4. Recursively scan C:\ for target file types (.pdf, .doc, .docx, .xls, .msg)
+5. Construct PowerShell commands with hex-encoded exfiltration URL
+6. Execute _wsystem() to run PowerShell Invoke-RestMethod
+7. Upload files via HTTP PUT to http://203.0.113.42:8000/
+
+**Files:**
+- [Investigation Report](./WEEK%206%20-%20Nullform%20Vault/INVESTIGATION_REPORT.md)
+- [Challenge README](./WEEK%206%20-%20Nullform%20Vault/README.md)
+- [IOC Report (CSV)](./WEEK%206%20-%20Nullform%20Vault/ioc_report.csv)
+- [IOC Report (Markdown)](./WEEK%206%20-%20Nullform%20Vault/ioc_report.md)
+- [Malware Sample](./WEEK%206%20-%20Nullform%20Vault/Obfuscated_Intent.exe)
+
+---
+
 ## 🎯 Learning Objectives
 
 Through these challenges, I'm developing expertise in:
@@ -135,14 +222,17 @@ Through these challenges, I'm developing expertise in:
 - **Digital Forensics:** Evidence collection and analysis
 - **Malware Analysis:** Threat detection and reverse engineering
 - **Security Operations:** Monitoring, detection, and response
-- **Cloud Security:** AWS infrastructure security
+- **Cloud Security:** AWS and Azure infrastructure security
 - **Python Automation:** Security tooling and scripting
 - **OSINT Techniques:** Open source intelligence gathering
 - **Azure Security:** Azure AD, Azure Arc, Cloud Shell investigation
 - **Email Security:** Phishing detection and analysis
 - **Network Forensics:** PCAP analysis and traffic inspection
-- **Reverse Engineering:** Binary analysis and decompilation
+- **Reverse Engineering:** Binary analysis, decompilation, and obfuscation reversal
 - **Cryptanalysis:** Breaking custom encryption schemes
+- **DNS Security:** Typosquatting detection and analysis
+- **Supply Chain Security:** Backdoor detection in legitimate software
+- **Credential Theft Analysis:** Exfiltration detection and prevention
 
 ---
 
@@ -153,12 +243,14 @@ Through these challenges, I'm developing expertise in:
 - **Cloud:** AWS (S3, IAM, Secrets Manager), Azure (Azure AD, Azure Arc, Cloud Shell)
 - **Cryptography:** Encoding/decoding, cipher analysis, custom algorithm breaking
 - **Security:** OWASP practices, security frameworks, MITRE ATT&CK
-- **Forensics:** Log analysis, artifact recovery, PCAP analysis
-- **Network Analysis:** Wireshark, tcpdump
+- **Forensics:** Log analysis, artifact recovery, PCAP analysis, Sysmon
+- **Network Analysis:** Wireshark, tcpdump, SMTP protocol analysis
 - **Email Analysis:** SMTP protocol analysis, phishing detection
 - **Database:** SQL, MySQL/MariaDB forensics
-- **Windows:** Sysmon, Event Viewer, Windows Event Logs
-- **Reverse Engineering:** Ghidra, binary analysis, disassembly
+- **Windows:** Sysmon, Event Viewer, Windows Event Logs, PowerShell forensics
+- **Reverse Engineering:** Ghidra, Python decompilation, binary analysis, obfuscation reversal
+- **Malware Analysis:** Static analysis, dynamic analysis, IOC extraction
+- **DNS:** DNS query analysis, typosquatting detection
 
 ---
 
@@ -170,6 +262,8 @@ Through these challenges, I'm developing expertise in:
 | 2 | Stealer's Shadow | ✅ Completed | Malware/IR | Intermediate |
 | 3 | Quantum Conundrum | ✅ Completed | Reverse Eng/Crypto | Hard |
 | 4 | Echo Trail | ✅ Completed | Cloud/IR | Intermediate |
+| 5 | Emerald Anomaly | ✅ Completed | Malware/Network | Hard |
+| 6 | Nullform Vault | ✅ Completed | Malware/RE/Forensics | Hard |
 
 ---
 
@@ -179,12 +273,24 @@ Through these challenges, I'm developing expertise in:
 - ✅ Week 2: Advanced malware analysis and blockchain-based attack detection
 - ✅ Week 3: Reverse-engineered and broke "quantum-proof" encryption system
 - ✅ Week 4: Cloud security incident response and Azure exploitation analysis
-- ✅ Identified 25+ critical security vulnerabilities across four challenges
+- ✅ Week 5: Decoded obfuscated backdoor and identified dual-infrastructure attack
+- ✅ Week 6: Reverse-engineered UPX-packed malware and documented complete exfiltration chain
+- ✅ Identified 35+ critical security vulnerabilities across six challenges
 - ✅ Created automated analysis scripts for log parsing and forensics
 - ✅ Documented comprehensive remediation steps
-- ✅ Discovered novel attack techniques (blockchain payload delivery, LOLBin chaining, Azure Arc SSH abuse, 7-layer cipher obfuscation)
+- ✅ Discovered novel attack techniques:
+  - Blockchain payload delivery (Week 2)
+  - LOLBin chaining (Week 2)
+  - Azure Arc SSH abuse (Week 4)
+  - 7-layer cipher obfuscation (Week 3)
+  - CRYPTO_SEED obfuscation (Week 5)
+  - GitHub typosquatting (Week 5)
+  - MCP supply chain backdoor (Week 5)
 - ✅ Demonstrated expertise in multi-cloud environments (AWS, Azure)
 - ✅ Successfully performed binary reverse engineering and cryptanalysis
+- ✅ Mastered PowerShell-based forensics and log analysis
+- ✅ Developed proficiency in Sysmon event analysis
+- ✅ Advanced PCAP analysis and SMTP protocol forensics
 
 ---
 
@@ -211,6 +317,17 @@ echo-response-offsec-challenge/
 │   ├── README.md                      # Challenge overview
 │   ├── INVESTIGATION_REPORT.md        # Detailed forensic analysis
 │   └── analyze_logs.py                # Azure log parser script
+├── WEEK 5 - Emerald Anomaly/
+│   ├── README.md                      # Challenge overview
+│   ├── INVESTIGATION_REPORT.md        # Detailed forensic analysis
+│   ├── analyze_backdoor.ps1           # PowerShell decoder script
+│   └── mcp_backdoor_server.py         # Backdoor source code
+├── WEEK 6 - Nullform Vault/
+│   ├── README.md                      # Challenge overview and Q&A
+│   ├── INVESTIGATION_REPORT.md        # Complete forensic investigation
+│   ├── Obfuscated_Intent.exe          # Malware sample (UPX-packed)
+│   ├── ioc_report.csv                 # IOCs in CSV format
+│   └── ioc_report.md                  # IOCs in Markdown format
 └── ...
 ```
 
@@ -222,7 +339,7 @@ To explore the solutions:
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/Rudii-25/OffSec-echo-response-challenge.git
+   git clone https://github.com/umair-aziz025/echo-response-offsec-challenge.git
    cd echo-response-offsec-challenge
    ```
 
@@ -235,6 +352,10 @@ To explore the solutions:
    cd "WEEK 3 - Quantum Conundrum"
    # or
    cd "WEEK 4 - Echo Trail"
+   # or
+   cd "WEEK 5 - Emerald Anomaly"
+   # or
+   cd "WEEK 6 - Nullform Vault"
    ```
 
 3. **Read the challenge writeup:**
@@ -243,7 +364,11 @@ To explore the solutions:
 
 4. **Run the solution scripts (if applicable):**
    ```bash
+   # Python scripts
    python analyze_leak.py
+   
+   # PowerShell scripts
+   .\analyze_backdoor.ps1
    ```
 
 ---
@@ -260,9 +385,9 @@ To explore the solutions:
 
 ## 🤝 Connect
 
-**Rudra Sharma**  
-- GitHub: [@Rudii-25](https://github.com/Rudii-25)
-- Repository: [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge.git)
+**Umair Aziz**  
+- GitHub: [@umair-aziz025](https://github.com/umair-aziz025)
+- Repository: [echo-response-offsec-challenge](https://github.com/umair-aziz025/echo-response-offsec-challenge)
 
 ---
 
@@ -278,10 +403,8 @@ If you find these solutions helpful, please consider giving this repository a st
 
 ---
 
-**Last Updated:** October 31, 2025
+**Last Updated:** November 11, 2025
 
 ---
 
 *"Will you uncover the truth before the balance collapses?"*
-
-**Last Updated:** October 31, 2025

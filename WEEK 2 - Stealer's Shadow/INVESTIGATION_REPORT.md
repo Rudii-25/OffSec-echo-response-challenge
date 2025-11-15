@@ -1,6 +1,6 @@
 # Stealer's Shadow - Security Incident Investigation Report
 **Date:** October 15, 2025  
-**Investigator:** MR. Umair  
+**Investigator:** MR. Rudra 
 **Case:** Advanced Persistent Threat - Data Exfiltration Incident  
 **Target:** The Etherians (Megacorp One)  
 **Compromised System:** WK001.megacorpone.com  
@@ -1215,7 +1215,7 @@ This investigation successfully reconstructed a sophisticated multi-stage cyber 
 
 ---
 
-**Report Prepared By:** MR. Umair  
+**Report Prepared By:** MR. Rudra
 **Date:** October 15, 2025  
 **Classification:** INTERNAL USE ONLY  
 **Distribution:** Security Team, Management, IT Department
