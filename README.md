@@ -339,7 +339,7 @@ To explore the solutions:
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/umair-aziz025/echo-response-offsec-challenge.git
+   git clone https://github.com/Rudii-25/OffSec-echo-response-challenge.git
    cd echo-response-offsec-challenge
    ```
 
@@ -385,9 +385,9 @@ To explore the solutions:
 
 ## 🤝 Connect
 
-**Umair Aziz**  
-- GitHub: [@umair-aziz025](https://github.com/umair-aziz025)
-- Repository: [echo-response-offsec-challenge](https://github.com/umair-aziz025/echo-response-offsec-challenge)
+**Rudra Sharma**  
+- GitHub: [@Rudii-25](https://github.com/Rudii-25)
+- Repository: [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge)
 
 ---
 
