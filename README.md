@@ -14,6 +14,8 @@ Echo Response is a high-stakes cyber defense simulation featuring escalating sce
 
 ## 📂 Challenge Solutions
 
+~
+
 ### ✅ [Week 1 - ProtoVault Breach](./WEEK%201%20-%20ProtoVault%20Breach)
 **Status:** COMPLETED  
 **Category:** Incident Response, Digital Forensics, OSINT  
@@ -67,7 +69,7 @@ Echo Response is a high-stakes cyber defense simulation featuring escalating sce
 ### ✅ [Week 3 - Quantum Conundrum](./WEEK%203%20-%20Quantum%20Conundrum)
 **Status:** COMPLETED  
 **Category:** Reverse Engineering, Cryptanalysis, Binary Analysis  
-**Difficulty:** Hard
+**Difficulty:** Insane
 
 **Scenario:** Break Megacorp Quantum's "unbreakable" and "quantum-proof" encryption protecting the Obscuran Key. Reverse-engineer a sophisticated multi-layer cipher, analyze binary code, and decrypt the encrypted vault to extract the hidden flag.
 
@@ -212,6 +214,7 @@ Echo Response is a high-stakes cyber defense simulation featuring escalating sce
 - [IOC Report (Markdown)](./WEEK%206%20-%20Nullform%20Vault/ioc_report.md)
 - [Malware Sample](./WEEK%206%20-%20Nullform%20Vault/Obfuscated_Intent.exe)
 
+~
 ---
 
 ## 🎯 Learning Objectives
@@ -231,26 +234,35 @@ Through these challenges, I'm developing expertise in:
 - **Reverse Engineering:** Binary analysis, decompilation, and obfuscation reversal
 - **Cryptanalysis:** Breaking custom encryption schemes
 - **DNS Security:** Typosquatting detection and analysis
+- **Log Analysis:** Web server log parsing and pattern detection
+- **Encoding/Decoding:** Base64 and other encoding schemes
+- **Web Security:** Path traversal and directory traversal attacks
 - **Supply Chain Security:** Backdoor detection in legitimate software
 - **Credential Theft Analysis:** Exfiltration detection and prevention
+- **ICS/SCADA Security:** Modbus protocol analysis, PLC forensics, IT-OT convergence
+- **Privilege Escalation:** Kernel exploitation analysis, CVE research
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-- **Programming:** Python, Bash/PowerShell scripting
+- **Programming:** Python, Bash/PowerShell scripting, C/C++ analysis
 - **Version Control:** Git forensics
 - **Cloud:** AWS (S3, IAM, Secrets Manager), Azure (Azure AD, Azure Arc, Cloud Shell)
-- **Cryptography:** Encoding/decoding, cipher analysis, custom algorithm breaking
+- **Cryptography:** Encoding/decoding, cipher analysis, custom algorithm breaking, Base64, ROT13, XOR
 - **Security:** OWASP practices, security frameworks, MITRE ATT&CK
-- **Forensics:** Log analysis, artifact recovery, PCAP analysis, Sysmon
-- **Network Analysis:** Wireshark, tcpdump, SMTP protocol analysis
+- **Forensics:** Log analysis, artifact recovery, PCAP analysis, Sysmon, Windows Event Logs
+- **Network Analysis:** Wireshark, Scapy, tcpdump, SMTP protocol analysis, Slack API forensics
 - **Email Analysis:** SMTP protocol analysis, phishing detection
 - **Database:** SQL, MySQL/MariaDB forensics
-- **Windows:** Sysmon, Event Viewer, Windows Event Logs, PowerShell forensics
-- **Reverse Engineering:** Ghidra, Python decompilation, binary analysis, obfuscation reversal
-- **Malware Analysis:** Static analysis, dynamic analysis, IOC extraction
+- **Windows:** Sysmon, Event Viewer, Windows Event Logs, PowerShell forensics, LSASS analysis
+- **Reverse Engineering:** Ghidra, Python decompilation, binary analysis, obfuscation reversal, PE analysis
+- **Malware Analysis:** Static analysis, dynamic analysis, IOC extraction, UPX unpacking, anti-debugging detection
 - **DNS:** DNS query analysis, typosquatting detection
+- **ICS/SCADA:** Modbus protocol analysis, PLC forensics, industrial control system security
+- **Privilege Escalation:** Kernel vulnerability analysis, CVE research, exploit analysis
+- **Detection Engineering:** Yara rules, Snort rules, Sigma rules
+- **Web Security:** Path traversal detection, access log analysis, vulnerability assessment
 
 ---
 
@@ -258,24 +270,30 @@ Through these challenges, I'm developing expertise in:
 
 | Week | Challenge Name | Status | Category | Difficulty |
 |------|---------------|--------|----------|------------|
+| 0 | Tutorial Challenge | ✅ Completed | Log Analysis/Encoding | Easy |
 | 1 | ProtoVault Breach | ✅ Completed | Forensics/IR | Beginner |
 | 2 | Stealer's Shadow | ✅ Completed | Malware/IR | Intermediate |
-| 3 | Quantum Conundrum | ✅ Completed | Reverse Eng/Crypto | Hard |
+| 3 | Quantum Conundrum | ✅ Completed | Reverse Eng/Crypto | Insane |
 | 4 | Echo Trail | ✅ Completed | Cloud/IR | Intermediate |
 | 5 | Emerald Anomaly | ✅ Completed | Malware/Network | Hard |
 | 6 | Nullform Vault | ✅ Completed | Malware/RE/Forensics | Hard |
+| 7 | Codex Circuit | ✅ Completed | Network/PCAP/IR | Easy |
+| 8 | Last Ascent | ✅ Completed | ICS/SCADA/Priv Esc | Insane |
 
 ---
 
 ## 🏆 Achievements
 
+- ✅ Week 0: Mastered challenge format and identified path traversal attack
 - ✅ Week 1: Complete investigation with all questions answered
 - ✅ Week 2: Advanced malware analysis and blockchain-based attack detection
 - ✅ Week 3: Reverse-engineered and broke "quantum-proof" encryption system
 - ✅ Week 4: Cloud security incident response and Azure exploitation analysis
 - ✅ Week 5: Decoded obfuscated backdoor and identified dual-infrastructure attack
 - ✅ Week 6: Reverse-engineered UPX-packed malware and documented complete exfiltration chain
-- ✅ Identified 35+ critical security vulnerabilities across six challenges
+- ✅ Week 7: Analyzed Slack-based data exfiltration and recovered customer data from PCAP
+- ✅ Week 8: ICS/SCADA forensics - traced attack from phishing to turbine shutdown via CVE-2024-35250
+- ✅ Identified 45+ critical security vulnerabilities across eight challenges
 - ✅ Created automated analysis scripts for log parsing and forensics
 - ✅ Documented comprehensive remediation steps
 - ✅ Discovered novel attack techniques:
@@ -286,11 +304,20 @@ Through these challenges, I'm developing expertise in:
   - CRYPTO_SEED obfuscation (Week 5)
   - GitHub typosquatting (Week 5)
   - MCP supply chain backdoor (Week 5)
+  - UPX packing + hex-encoded PowerShell exfiltration (Week 6)
+  - XOR-encoded file extensions + ICMP "w00t" payload (Week 6)
+  - Anti-debugging evasion (IsDebuggerPresent/CheckRemoteDebuggerPresent) (Week 6)
+  - Slack API forensics for insider threat detection (Week 7)
+  - Rogue workspace exfiltration via collaboration tools (Week 7)
+  - CVE-2024-35250 kernel exploitation (Week 8)
+  - SSP DLL credential harvesting (Week 8)
+  - IT-OT pivot via Modbus protocol (Week 8)
 - ✅ Demonstrated expertise in multi-cloud environments (AWS, Azure)
 - ✅ Successfully performed binary reverse engineering and cryptanalysis
 - ✅ Mastered PowerShell-based forensics and log analysis
 - ✅ Developed proficiency in Sysmon event analysis
 - ✅ Advanced PCAP analysis and SMTP protocol forensics
+- ✅ ICS/SCADA attack investigation and Modbus protocol analysis
 
 ---
 
@@ -299,6 +326,12 @@ Through these challenges, I'm developing expertise in:
 ```
 echo-response-offsec-challenge/
 ├── README.md                          # This file
+├── WEEK 0 - Tutorial Challenge/
+│   ├── README.md                      # Challenge overview
+│   ├── INVESTIGATION_REPORT.md        # Detailed forensic analysis
+│   ├── analyze_tutorial.py            # Analysis script
+│   ├── access.log                     # Web server logs
+│   └── tutorial.txt                   # Base64-encoded message
 ├── WEEK 1 - ProtoVault Breach/
 │   ├── README.md                      # Challenge overview
 │   ├── INVESTIGATION_REPORT.md        # Detailed forensic analysis
@@ -328,6 +361,14 @@ echo-response-offsec-challenge/
 │   ├── Obfuscated_Intent.exe          # Malware sample (UPX-packed)
 │   ├── ioc_report.csv                 # IOCs in CSV format
 │   └── ioc_report.md                  # IOCs in Markdown format
+├── WEEK 7 - Codex Circuit/
+│   ├── README.md                      # Challenge overview and Q&A
+│   ├── INVESTIGATION_REPORT.md        # Detailed forensic analysis
+│   ├── analyze_slack_exfiltration.py  # PCAP analysis script
+│   └── find_exfiltration.py           # Exfiltration detection script
+├── WEEK 8 - Last Ascent/
+│   ├── README.md                      # Challenge overview and Q&A
+│   └── INVESTIGATION_REPORT.md        # Complete ICS/SCADA forensic analysis
 └── ...
 ```
 
@@ -339,12 +380,14 @@ To explore the solutions:
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/Rudii-25/OffSec-echo-response-challenge.git
+   git clone https://github.com/umair-aziz025/echo-response-offsec-challenge.git
    cd echo-response-offsec-challenge
    ```
 
 2. **Navigate to a specific week:**
    ```bash
+   cd "WEEK 0 - Tutorial Challenge"
+   # or
    cd "WEEK 1 - ProtoVault Breach"
    # or
    cd "WEEK 2 - Stealer's Shadow"
@@ -356,6 +399,10 @@ To explore the solutions:
    cd "WEEK 5 - Emerald Anomaly"
    # or
    cd "WEEK 6 - Nullform Vault"
+   # or
+   cd "WEEK 7 - Codex Circuit"
+   # or
+   cd "WEEK 8 - Last Ascent"
    ```
 
 3. **Read the challenge writeup:**
@@ -380,14 +427,34 @@ To explore the solutions:
 - [AWS Security Best Practices](https://aws.amazon.com/security/best-practices/)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [MITRE ATT&CK](https://attack.mitre.org/)
+- [SANS Internet Storm Center](https://isc.sans.edu/)
+- [CISA Cybersecurity Advisories](https://www.cisa.gov/news-events/cybersecurity-advisories)
+- [Microsoft Security Response Center](https://msrc.microsoft.com/)
+- [Malware Analysis Tutorials - Malware Unicorn](https://malwareunicorn.org/)
+- [ICS-CERT Advisories](https://www.cisa.gov/uscert/ics/advisories)
+- [Ghidra Documentation](https://ghidra-sre.org/)
+- [PowerShell Security Best Practices](https://learn.microsoft.com/en-us/powershell/scripting/security/overview)
+- [Azure Security Documentation](https://learn.microsoft.com/en-us/azure/security/)
+- [Wireshark User Guide](https://www.wireshark.org/docs/wsug_html_chunked/)
+- [PCAP Analysis Techniques](https://www.malware-traffic-analysis.net/)
+- [SANS Internet Storm Center](https://isc.sans.edu/)
+- [CISA Cybersecurity Advisories](https://www.cisa.gov/news-events/cybersecurity-advisories)
+- [Microsoft Security Response Center](https://msrc.microsoft.com/)
+- [Malware Analysis Tutorials - Malware Unicorn](https://malwareunicorn.org/)
+- [ICS-CERT Advisories](https://www.cisa.gov/uscert/ics/advisories)
+- [Ghidra Documentation](https://ghidra-sre.org/)
+- [PowerShell Security Best Practices](https://learn.microsoft.com/en-us/powershell/scripting/security/overview)
+- [Azure Security Documentation](https://learn.microsoft.com/en-us/azure/security/)
+- [Wireshark User Guide](https://www.wireshark.org/docs/wsug_html_chunked/)
+- [PCAP Analysis Techniques](https://www.malware-traffic-analysis.net/)
 
 ---
 
 ## 🤝 Connect
 
-**Rudra Sharma**  
-- GitHub: [@Rudii-25](https://github.com/Rudii-25)
-- Repository: [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge)
+**Umair Aziz**  
+- GitHub: [@umair-aziz025](https://github.com/umair-aziz025)
+- Repository: [echo-response-offsec-challenge](https://github.com/umair-aziz025/echo-response-offsec-challenge)
 
 ---
 
@@ -403,7 +470,7 @@ If you find these solutions helpful, please consider giving this repository a st
 
 ---
 
-**Last Updated:** November 11, 2025
+**Last Updated:** November 26, 2025 
 
 ---
 
