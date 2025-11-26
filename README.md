@@ -14,7 +14,32 @@ Echo Response is a high-stakes cyber defense simulation featuring escalating sce
 
 ## 📂 Challenge Solutions
 
-~
+### ✅ [Week 0 - Tutorial Challenge](./WEEK%200%20-%20Tutorial%20Challenge)
+**Status:** COMPLETED  
+**Category:** Incident Response, Log Analysis, Encoding  
+**Difficulty:** Easy
+
+**Scenario:** Introduction to Echo Response challenge format through Base64 decoding and web server log analysis. Participants decode a cybersecurity awareness poem and identify a path traversal attack targeting SSH private keys.
+
+**Key Skills:**
+- Base64 encoding/decoding
+- Web server log analysis
+- Path traversal vulnerability detection
+- Security incident investigation
+- Answer format familiarization
+
+**Key Findings:**
+- Successfully decoded Base64-encoded tutorial message
+- Identified path traversal attack from IP 192.168.1.101
+- Detected SSH private key exfiltration (/home/dave/.ssh/id_rsa)
+- 1,678 bytes exfiltrated with HTTP 200 status (successful attack)
+
+**Files:**
+- [Investigation Report](./WEEK%200%20-%20Tutorial%20Challenge/INVESTIGATION_REPORT.md)
+- [Analysis Script](./WEEK%200%20-%20Tutorial%20Challenge/analyze_tutorial.py)
+- [Challenge README](./WEEK%200%20-%20Tutorial%20Challenge/README.md)
+
+---
 
 ### ✅ [Week 1 - ProtoVault Breach](./WEEK%201%20-%20ProtoVault%20Breach)
 **Status:** COMPLETED  
