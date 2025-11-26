@@ -471,7 +471,7 @@ WEEK 3 - Quantum Conundrum/
 
 ---
 
-**Investigator:** MR. Umair  
+**Investigator:** MR. Rudra  
 **Date Completed:** October 21, 2025  
 **Challenge Series:** OffSec Echo Response - Proving Grounds: The Gauntlet
 

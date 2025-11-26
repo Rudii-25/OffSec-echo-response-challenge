@@ -1,7 +1,7 @@
 # Tutorial Challenge - Security Incident Investigation Report
 
 **Date:** October 7, 2025  
-**Investigator:** MR. Umair  
+**Investigator:** MR. Rudra 
 **Case:** Echo Response - Week 0 Tutorial  
 **Difficulty:** Easy  
 **Category:** Incident Response, Log Analysis, Encoding
@@ -664,7 +664,7 @@ See `analyze_tutorial.py` for automated forensic analysis tool.
 
 ---
 
-**Report Prepared By:** MR. Umair  
+**Report Prepared By:** MR. Rudra 
 **Date:** October 7, 2025  
 
 ---

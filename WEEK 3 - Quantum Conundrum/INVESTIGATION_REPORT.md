@@ -1,6 +1,6 @@
 # Quantum Conundrum - Security Assessment Report
 **Date:** October 21, 2025  
-**Investigator:** MR. Umair  
+**Investigator:** MR. Rudra
 **Case:** Megacorp Quantum Encryption System Analysis  
 **Target:** Obscurarium Realm Defense Systems  
 **Challenge:** Break the "Unbreakable" Quantum-Proof Cipher
@@ -862,7 +862,7 @@ Despite claims of being "quantum-proof," the system relies on:
 ---
 
 **Report Completed:** October 21, 2025  
-**Investigator:** MR. Umair  
+**Investigator:** MR. Rudra
 **Case Status:** ✅ CLOSED - System breached, vulnerabilities documented  
 **Recommendation:** Complete cryptographic redesign required
 

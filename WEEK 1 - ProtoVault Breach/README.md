@@ -235,7 +235,7 @@ This directory contains:
 
 **Rudra Sharma**  
 - GitHub: [@Rudii-25](https://github.com/Rudii-25)
-- Repository: [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge.git)
+- Repository: [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge)
 
 ---
 

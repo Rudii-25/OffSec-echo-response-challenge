@@ -345,5 +345,5 @@ HKEY_CLASSES_ROOT\.epub → exefile association
 
 ---
 
-**Investigator:** MR. Umair    
+**Investigator:** MR. Rudra  
 **Challenge Platform:** OffSec Legends - Echo Response Event

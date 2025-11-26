@@ -350,7 +350,7 @@ WEEK 4 - Echo Trail/
 
 ---
 
-**Investigator:** MR. Umair  
+**Investigator:** MR. Rudra 
 **Date Completed:** October 28, 2025  
 **Challenge Series:** OffSec Echo Response - Proving Grounds: The Gauntlet
 

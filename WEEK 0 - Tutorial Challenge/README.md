@@ -411,8 +411,8 @@ This tutorial challenge serves as an introduction to the Echo Response series:
 ---
 
 **Challenge Completed:** October 7, 2025  
-**Investigator:** MR. Umair  
-**Repository:** [echo-response-offsec-challenge](https://github.com/umair-aziz025/echo-response-offsec-challenge)
+**Investigator:** MR. Rudra
+**Repository:** [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge)
 
 ---
 
