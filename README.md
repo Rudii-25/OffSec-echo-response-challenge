@@ -239,7 +239,96 @@ Echo Response is a high-stakes cyber defense simulation featuring escalating sce
 - [IOC Report (Markdown)](./WEEK%206%20-%20Nullform%20Vault/ioc_report.md)
 - [Malware Sample](./WEEK%206%20-%20Nullform%20Vault/Obfuscated_Intent.exe)
 
-~
+---
+
+### ✅ [Week 7 - Codex Circuit](./WEEK%207%20-%20Codex%20Circuit)
+**Status:** COMPLETED  
+**Category:** Network Forensics, Incident Response, PCAP Analysis  
+**Difficulty:** Easy
+
+**Scenario:** At the heart of the Cyber Realms lies the **Codex Circuit** - the foundation of every permission, boundary, vault, and soulprint. With Voidweaver ready to activate it, a critical alert emerges: confidential MegaCorp documents have surfaced on a public forum. The Security Operations Center suspects internal misuse of Slack collaboration tools.
+
+**Challenge Objective:** Analyze network traffic (PCAP) to uncover Slack-based data exfiltration, identify the users involved (internal employee and threat actor), determine the timeline of events, and recover the exfiltrated customer data.
+
+**Key Skills:**
+- PCAP analysis using Scapy
+- Slack API forensics (files.upload, file_shared events)
+- HTTP/HTTPS traffic analysis
+- Timeline reconstruction from packet data
+- User attribution via conversation context
+- File extraction from network captures
+- Excel file parsing and analysis
+- JSON payload analysis
+- Timestamp conversion (Unix to GMT)
+- Insider threat detection
+
+**Key Findings:**
+- **Exfiltrated File:** `sensitive_customer_list.xls` (6,656 bytes, 3 customer records worth $300,000)
+- **Internal User:** Ava (U09KA40P3F0) shared file at 2025-10-10 11:51:36 GMT
+- **Threat Actor:** James Brown (U09KRBDV8S1) exfiltrated to rogue workspace
+- **Rogue Workspace:** `secret-ops-workspace.slack.com` (Team ID: T09KSNJU27Q)
+- **Legitimate Workspace:** `team-megacorp.slack.com` (Team ID: T09KR3R0PFB)
+- **Attack Duration:** 6 minutes 12 seconds (from internal share to exfiltration)
+
+**Attack Chain:**
+1. Ava uploads customer list to company_documents channel
+2. File shared to channel members at 11:51:36 GMT
+3. James Brown (legitimate member) downloads file
+4. James Brown uploads same file to rogue workspace at 11:57:48 GMT
+5. Sensitive customer data now exposed on unauthorized Slack workspace
+
+
+**Files:**
+- [Investigation Report](./WEEK%207%20-%20Codex%20Circuit/INVESTIGATION_REPORT.md)
+- [Analysis Script](./WEEK%207%20-%20Codex%20Circuit/analyze_slack_exfiltration.py)
+- [Exfiltration Finder](./WEEK%207%20-%20Codex%20Circuit/find_exfiltration.py)
+- [Challenge README](./WEEK%207%20-%20Codex%20Circuit/README.md)
+
+---
+
+### ✅ [Week 8 - Last Ascent](./WEEK%208%20-%20Last%20Ascent)
+**Status:** COMPLETED  
+**Category:** ICS/SCADA Forensics, Incident Response, Privilege Escalation  
+**Difficulty:** Insane
+
+**Scenario:** The final ascent - a critical incident response scenario targeting Megacorp One's Energy Systems Division. Autonomous wind turbines have been manipulated and taken out of MegaCorp One's control. The power stabilization layer has been compromised, and the **Codex Circuit's** protective perimeter is now vulnerable.
+
+**Challenge Objective:** Investigate a sophisticated multi-stage attack spanning phishing, kernel exploitation, credential theft, SSH pivoting, and ICS/SCADA manipulation. Reconstruct the complete attack chain from initial access to turbine shutdown.
+
+**Key Skills:**
+- ICS/SCADA Forensics and Modbus protocol analysis
+- Windows privilege escalation analysis (CVE-2024-35250)
+- SSP DLL credential harvesting detection
+- Sysmon log analysis (78MB+ logs)
+- Browser forensics (Chrome history)
+- SSH key forensics
+- Binary masquerading detection
+- IT-OT convergence attack investigation
+- MITRE ATT&CK technique mapping
+
+**Key Findings:**
+- **Phishing Domain:** `microsoft-login.com` (typosquatting Microsoft)
+- **Browser:** Chrome `137.0.7151.56`
+- **Privilege Escalation:** CVE-2024-35250 (ks.sys/MSKSSRV kernel vulnerability)
+- **Exploit Tool:** `BitLockerDeviceEncrypton.exe` (note typo - masquerading technique!)
+- **Credential Harvester:** `ssp.dll` injected into LSASS
+- **Captured Credentials:** `carmen.santos:Qwerty09!`
+- **Pivot Info:** SSH username `vyos` with `router2.privkey`
+- **Attacker IP:** `192.168.1.253` (Router2/VyOS)
+- **Impact:** All 4 wind turbines forced into 24-hour lockout
+
+**Attack Chain:**
+1. Phishing via microsoft-login.com → Initial access
+2. BitLockerDeviceEncrypton.exe → CVE-2024-35250 → SYSTEM privileges
+3. ssp.dll → LSASS injection → Credential capture
+4. SSH pivot via router2.privkey → Router2 (192.168.1.253)
+5. MonitorTool.exe exploitation → RESOURCES server compromise
+6. Modbus commands → PLCs (192.168.2.1-192.168.2.4) → Turbine lockout
+
+**Files:**
+- [Investigation Report](./WEEK%208%20-%20Last%20Ascent/INVESTIGATION_REPORT.md)
+- [Challenge README](./WEEK%208%20-%20Last%20Ascent/README.md)
+
 ---
 
 ## 🎯 Learning Objectives
@@ -495,7 +584,7 @@ If you find these solutions helpful, please consider giving this repository a st
 
 ---
 
-**Last Updated:** November 26, 2025 
+**Last Updated:** November 29, 2025 
 
 ---
 
