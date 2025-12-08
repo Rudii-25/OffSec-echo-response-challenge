@@ -286,7 +286,44 @@ Echo Response is a high-stakes cyber defense simulation featuring escalating sce
 
 ---
 
+### ✅ [Week 8 - Last Ascent](./WEEK%208%20-%20Last%20Ascent)
+**Status:** COMPLETED  
+**Category:** ICS/SCADA Forensics, Incident Response, Privilege Escalation  
+**Difficulty:** Insane
 
+**Scenario:** The final ascent - a critical incident response scenario targeting Megacorp One's Energy Systems Division. Autonomous wind turbines have been manipulated and taken out of MegaCorp One's control. The power stabilization layer has been compromised, and the **Codex Circuit's** protective perimeter is now vulnerable.
+
+**Challenge Objective:** Investigate a sophisticated multi-stage attack spanning phishing, kernel exploitation, credential theft, SSH pivoting, and ICS/SCADA manipulation. Reconstruct the complete attack chain from initial access to turbine shutdown.
+
+**Key Skills:**
+- ICS/SCADA Forensics and Modbus protocol analysis
+- Windows privilege escalation analysis (CVE-2024-35250)
+- SSP DLL credential harvesting detection
+- Sysmon log analysis (78MB+ logs)
+- Browser forensics (Chrome history)
+- SSH key forensics
+- Binary masquerading detection
+- IT-OT convergence attack investigation
+- MITRE ATT&CK technique mapping
+
+**Key Findings:**
+- **Phishing Domain:** `microsoft-login.com` (typosquatting Microsoft)
+- **Browser:** Chrome `137.0.7151.56`
+- **Privilege Escalation:** CVE-2024-35250 (ks.sys/MSKSSRV kernel vulnerability)
+- **Exploit Tool:** `BitLockerDeviceEncrypton.exe` (note typo - masquerading technique!)
+- **Credential Harvester:** `ssp.dll` injected into LSASS
+- **Captured Credentials:** `carmen.santos:Qwerty09!`
+- **Pivot Info:** SSH username `vyos` with `router2.privkey`
+- **Attacker IP:** `192.168.1.253` (Router2/VyOS)
+- **Impact:** All 4 wind turbines forced into 24-hour lockout
+
+**Attack Chain:**
+1. Phishing via microsoft-login.com → Initial access
+2. BitLockerDeviceEncrypton.exe → CVE-2024-35250 → SYSTEM privileges
+3. ssp.dll → LSASS injection → Credential capture
+4. SSH pivot via router2.privkey → Router2 (192.168.1.253)
+5. MonitorTool.exe exploitation → RESOURCES server compromise
+6. Modbus commands → PLCs (192.168.2.1-192.168.2.4) → Turbine lockout
 
 **Files:**
 - [Investigation Report](./WEEK%208%20-%20Last%20Ascent/INVESTIGATION_REPORT.md)
