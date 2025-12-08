@@ -3,7 +3,7 @@
 ## Wind Turbine SCADA Infrastructure Forensic Analysis
 
 **Challenge:** Last Ascent (Week 8)  
-**Investigator:** MR. Umair  
+**Investigator:** MR. Rudra
 **Date:** November 26, 2025  
 **Target:** Megacorp One Energy Systems Division - Wind Farm SCADA Infrastructure  
 **Impact:** Power stabilization layer compromised, Codex Circuit protective perimeter vulnerable
@@ -593,7 +593,7 @@ This attack chain demonstrates the critical importance of defense-in-depth strat
 ---
 
 **Date:** November 26, 2025  
-**Investigator:** MR. Umair  
+**Investigator:** MR. Rudra
 **Case:** OffSec Echo Response - Week 8: Last Ascent
 
 ---

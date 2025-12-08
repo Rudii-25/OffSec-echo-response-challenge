@@ -379,7 +379,7 @@ strings -a unpacked.exe | grep -E '(IsDebugger|CheckRemote)'
 rule Obfuscated_Intent_Malware {
     meta:
         description = "Detects Obfuscated_Intent exfiltration malware"
-        author = "Umair Aziz"
+        author = "Rudra Sharma"
         date = "2025-11-11"
         
     strings:

@@ -6,7 +6,7 @@
 **Date:** November 11, 2025  
 **Severity:** CRITICAL  
 **Status:** Investigation Complete ✅  
-**Investigator:** Umair Aziz  
+**Investigator:** Rudra Sharma
 **Malware Sample:** Obfuscated_Intent.exe (UPX-packed document exfiltration malware)
 
 ### Key Findings
@@ -907,7 +907,7 @@ print(url)  # Output: http://203.0.113.42:8000/
 rule Obfuscated_Intent_Malware {
     meta:
         description = "Detects Obfuscated_Intent exfiltration malware"
-        author = "Umair Aziz"
+        author = "Rudra Sharma"
         date = "2025-11-11"
         
     strings:

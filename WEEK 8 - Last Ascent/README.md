@@ -171,4 +171,4 @@ Phishing (microsoft-login.com)
 ---
 
 **Challenge Completed:** November 26, 2025  
-**Investigator:** MR. Umair
+**Investigator:** MR. Rudra

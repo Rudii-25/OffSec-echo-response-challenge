@@ -2,7 +2,7 @@
 
 **Incident ID:** WEEK7-CODEX-CIRCUIT  
 **Investigation Date:** November 18, 2025  
-**Investigator:** MR. Umair   
+**Investigator:** MR. Rudra   
 **Classification:** Data Exfiltration via Collaboration Tools
 
 ---
@@ -335,7 +335,7 @@ Through systematic PCAP analysis, I reconstructed the complete timeline, identif
 ---
 
 **Date:** November 18, 2025  
-**Investigator:** Mr. Umair  
+**Investigator:** Mr. Rudra
 **Case:** OffSec Echo Response - Week 7: Codex Circuit
 
 ---
