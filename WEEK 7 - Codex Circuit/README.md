@@ -3,7 +3,7 @@
 **Challenge Name:** Slack Data Exfiltration Investigation  
 **Difficulty:** Easy  
 **Category:** Network Forensics, Incident Response, PCAP Analysis  
-**Date Completed:** November 18, 2025
+**Date Completed:** December 8, 2025
 
 ---
 
