@@ -12,6 +12,15 @@ Echo Response is a high-stakes cyber defense simulation featuring escalating sce
 
 ---
 
+## TL;DR
+✔ 9-week OffSec Echo Response challenge series  
+✔ Realistic incident response & breach simulations  
+✔ Full forensic investigations, malware analysis & cloud attacks  
+✔ Complete writeups + scripts for every challenge  
+✔ Built for learning real-world security analysis, not just CTF flags
+
+---
+
 ## 📂 Challenge Solutions
 
 ### ✅ [Week 0 - Tutorial Challenge](./WEEK%200%20-%20Tutorial%20Challenge)
