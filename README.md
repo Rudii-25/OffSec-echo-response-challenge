@@ -447,8 +447,8 @@ Through these challenges, I'm developing expertise in:
 ## 📝 Repository Structure
 
 ```
-echo-response-offsec-challenge/
-├── README.md                          # This file
+OffSec-echo-response-challenge/
+├── README.md                          # Main repository documentation
 ├── WEEK 0 - Tutorial Challenge/
 │   ├── README.md                      # Challenge overview
 │   ├── INVESTIGATION_REPORT.md        # Detailed forensic analysis
@@ -504,7 +504,7 @@ To explore the solutions:
 1. **Clone this repository:**
    ```bash
    git clone https://github.com/Rudii-25/OffSec-echo-response-challenge.git
-   cd echo-response-offsec-challenge
+   cd OffSec-echo-response-challenge
    ```
 
 2. **Navigate to a specific week:**
@@ -577,7 +577,8 @@ To explore the solutions:
 
 **Rudra Sharma**  
 - GitHub: [@Rudii-25](https://github.com/Rudii-25)
-- Repository: [echo-response-offsec-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge)
+- Repository: [OffSec-echo-response-challenge](https://github.com/Rudii-25/OffSec-echo-response-challenge)
+- Season 2: [OffSec-Arctic-Howl-Season-2](https://github.com/Rudii-25/OffSec-Arctic-Howl-Season-2)
 
 ---
 
